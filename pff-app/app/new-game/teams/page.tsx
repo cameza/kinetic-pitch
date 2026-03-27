@@ -30,7 +30,7 @@ export default async function GeneratedTeamsPage({ searchParams }: { searchParam
         {/* TEAM A */}
         <div className="bg-surface-container/60 rounded-xl border border-primary/30 overflow-hidden shadow-[0_0_15px_rgba(57,255,20,0.1)]">
           <div className="bg-primary/20 px-4 py-2 flex justify-between items-center border-b border-primary/30">
-            <h3 className="font-headline font-black text-lg text-primary">TEAM ALPHA</h3>
+            <h3 className="font-headline font-black text-lg text-primary flex items-center gap-2">⚪ WHITE</h3>
             <div className="text-right flex items-center gap-2">
               <div className="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Rating</div>
               <div className="text-base font-black text-white">{teamASkill} <span className="text-[10px] text-primary">PTS</span></div>
@@ -54,7 +54,7 @@ export default async function GeneratedTeamsPage({ searchParams }: { searchParam
         {/* TEAM B */}
         <div className="bg-surface-container/60 rounded-xl border border-accent-purple/30 overflow-hidden shadow-[0_0_15px_rgba(188,19,254,0.1)]">
           <div className="bg-accent-purple/20 px-4 py-2 flex justify-between items-center border-b border-accent-purple/30">
-            <h3 className="font-headline font-black text-lg text-accent-purple">TEAM OMEGA</h3>
+            <h3 className="font-headline font-black text-lg text-accent-purple flex items-center gap-2">⚫ DARK</h3>
             <div className="text-right flex items-center gap-2">
               <div className="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Rating</div>
               <div className="text-base font-black text-white">{teamBSkill} <span className="text-[10px] text-accent-purple">PTS</span></div>
