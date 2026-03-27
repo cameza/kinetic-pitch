@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review Selection - Pure Football Fun Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#BC13FE",
+              "primary-fixed-dim": "#2be800",
+              "on-primary-container": "#0b5800",
+              "surface-container": "#151a21",
+              "surface-bright": "#262c36",
+              "surface-container-low": "#0f141a",
+              "on-primary": "#0d6100",
+              "on-secondary-container": "#e8fbff",
+              "error-dim": "#d53d18",
+              "on-tertiary-fixed": "#31004a",
+              "surface": "#0a0e14",
+              "surface-variant": "#20262f",
+              "outline": "#72757d",
+              "on-tertiary": "#ffffff",
+              "tertiary-dim": "#d486ff",
+              "inverse-surface": "#f8f9ff",
+              "secondary-dim": "#00d4ec",
+              "on-secondary-fixed-variant": "#005964",
+              "tertiary-fixed": "#f0dbff",
+              "on-tertiary-fixed-variant": "#580084",
+              "on-background": "#f1f3fc",
+              "surface-container-lowest": "#000000",
+              "secondary": "#BC13FE",
+              "on-surface-variant": "#a8abb3",
+              "primary": "#39FF14",
+              "tertiary-container": "#580084",
+              "on-primary-fixed": "#064200",
+              "secondary-fixed": "#f0dbff",
+              "on-primary-fixed-variant": "#0d6200",
+              "primary-container": "#2ff801",
+              "background": "#0a0e14",
+              "secondary-container": "#31004a",
+              "on-error-container": "#ffd2c8",
+              "primary-dim": "#2be800",
+              "surface-tint": "#39FF14",
+              "outline-variant": "#44484f",
+              "surface-container-high": "#1b2028",
+              "inverse-on-surface": "#51555c",
+              "surface-container-highest": "#20262f",
+              "on-tertiary-container": "#f0dbff",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#d486ff",
+              "primary-fixed": "#2ff801",
+              "on-surface": "#f1f3fc",
+              "inverse-primary": "#106f00",
+              "error-container": "#b92902",
+              "surface-dim": "#0a0e14",
+              "on-error": "#450900",
+              "tertiary-fixed-dim": "#d486ff",
+              "error": "#ff7351",
+              "on-secondary-fixed": "#31004a"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-primary {
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+        }
+        .neon-glow-secondary {
+            text-shadow: 0 0 10px rgba(188, 19, 254, 0.4);
+        }
+        .glass-panel {
+            background: rgba(32, 38, 47, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+            background: radial-gradient(circle at top right, #1a0b2e 0%, #0a0e14 100%);
+        }
+    </style>
+</head>
+<body class="text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar - Shared Component -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-[#0e0e0f] dark:bg-[#0e0e0f] z-50 shadow-[0_4px_20px_rgba(57,255,20,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#39FF14] cursor-pointer scale-95 active:scale-90 transition-transform" data-icon="menu">menu</span>
+<h1 class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-xl font-black italic text-[#39FF14] tracking-tighter">Pure Football Fun Group</h1>
+</div>
+<div class="w-10 h-10 rounded-full border border-primary/20 overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiL7Rllg4zYSk6e8zG5vU49cc8FTpgY4Qbzl7BsJiQ7qVB71E94K0QmACLFI5_k2iDQHzRICJKYc-mRvre1NaqwwyMsDHbHyl_k7Gch0QM4ug_Gq5L8Y_9M-AUiWSMlncMWau3T1VV3KfKnjGLM82bXTMYmJnAigm77kFpkUlMKiPaRK4_lpFIAzidKkUeMdOivAOOI_BIH2QW7QrnB2lmr8tki2fMwp_dKLgdUAIgT-Xgwmu5Hkv-YhLPv7nJNLinIIfAWq6-8w"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen">
+<!-- Review Section Header -->
+<div class="mb-10 text-center">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight uppercase text-primary mb-2 neon-glow-primary">Review Selection</h2>
+<p class="text-on-surface-variant font-medium tracking-wide">CONFIRM YOUR ELITE SQUAD FOR THE UPCOMING FIXTURE</p>
+</div>
+<!-- Squad List -->
+<div class="space-y-4">
+<!-- Player Card 1 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-high/60 rounded-full border border-outline-variant/10 hover:border-tertiary/30 transition-all group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-headline text-lg font-bold leading-none">MARCUS RASHFORD</p>
+<p class="text-xs font-label text-primary tracking-widest uppercase">STRIKER</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-label text-on-surface-variant">READY</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Player Card 2 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-high/60 rounded-full border border-outline-variant/10 hover:border-tertiary/30 transition-all group ml-4 md:ml-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-headline text-lg font-bold leading-none">KEVIN DE BRUYNE</p>
+<p class="text-xs font-label text-primary tracking-widest uppercase">MIDFIELDER</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-label text-on-surface-variant">READY</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Player Card 3 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-high/60 rounded-full border border-outline-variant/10 hover:border-tertiary/30 transition-all group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-headline text-lg font-bold leading-none">VIRGIL VAN DIJK</p>
+<p class="text-xs font-label text-primary tracking-widest uppercase">DEFENDER</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-label text-on-surface-variant">READY</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Player Card 4 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-high/60 rounded-full border border-outline-variant/10 hover:border-tertiary/30 transition-all group ml-4 md:ml-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-headline text-lg font-bold leading-none">ALISSON BECKER</p>
+<p class="text-xs font-label text-primary tracking-widest uppercase">GOALKEEPER</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-label text-on-surface-variant">READY</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Player Card 5 -->
+<div class="flex items-center justify-between p-5 bg-surface-container-high/60 rounded-full border border-outline-variant/10 hover:border-tertiary/30 transition-all group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-headline text-lg font-bold leading-none">ERLING HAALAND</p>
+<p class="text-xs font-label text-primary tracking-widest uppercase">STRIKER</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-label text-on-surface-variant">READY</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Sticky Interaction Zone -->
+<div class="mt-16 space-y-4">
+<button class="w-full py-5 rounded-full bg-gradient-to-r from-primary to-tertiary text-on-primary font-headline font-extrabold text-xl uppercase tracking-tighter shadow-[0_0_25px_rgba(188,19,254,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all">
+                Confirm &amp; Generate
+            </button>
+<button class="w-full py-4 rounded-full border border-tertiary/60 bg-tertiary/10 text-tertiary font-headline font-bold uppercase tracking-widest hover:bg-tertiary/20 transition-colors">
+                Edit Selection
+            </button>
+</div>
+</main>
+<!-- BottomNavBar - Shared Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#131314]/80 backdrop-blur-md rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.6)] animate-pulse-slow">
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-[#BC13FE] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.8)] hover:text-[#BC13FE] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Teams</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-[#BC13FE] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="database">database</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Database</span>
+</a>
+</nav>
+<!-- Decorative Atmospheric Overlay -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-tertiary/5 rounded-full blur-[120px]"></div>
+</div>
+</body></html>

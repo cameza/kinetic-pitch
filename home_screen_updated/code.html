@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "accent-purple": "#BC13FE",
+              "tertiary": "#88f6ff",
+              "primary-fixed-dim": "#2be800",
+              "on-primary-container": "#0b5800",
+              "surface-container": "#151a21",
+              "surface-bright": "#262c36",
+              "surface-container-low": "#0f141a",
+              "on-primary": "#0d6100",
+              "on-secondary-container": "#e8fbff",
+              "error-dim": "#d53d18",
+              "on-tertiary-fixed": "#003f43",
+              "surface": "#0a0e14",
+              "surface-variant": "#20262f",
+              "outline": "#72757d",
+              "on-tertiary": "#005d62",
+              "tertiary-dim": "#00deea",
+              "inverse-surface": "#f8f9ff",
+              "secondary-dim": "#00d4ec",
+              "on-secondary-fixed-variant": "#005964",
+              "tertiary-fixed": "#17eefa",
+              "on-tertiary-fixed-variant": "#005e63",
+              "on-background": "#f1f3fc",
+              "surface-container-lowest": "#000000",
+              "secondary": "#00e3fd",
+              "on-surface-variant": "#a8abb3",
+              "primary": "#39FF14",
+              "tertiary-container": "#17eefa",
+              "on-primary-fixed": "#064200",
+              "secondary-fixed": "#26e6ff",
+              "on-primary-fixed-variant": "#0d6200",
+              "primary-container": "#2ff801",
+              "background": "#0a0e14",
+              "secondary-container": "#006875",
+              "on-error-container": "#ffd2c8",
+              "primary-dim": "#2be800",
+              "surface-tint": "#8eff71",
+              "outline-variant": "#44484f",
+              "surface-container-high": "#1b2028",
+              "inverse-on-surface": "#51555c",
+              "surface-container-highest": "#20262f",
+              "on-tertiary-container": "#005458",
+              "on-secondary": "#004d57",
+              "secondary-fixed-dim": "#00d7f0",
+              "primary-fixed": "#2ff801",
+              "on-surface": "#f1f3fc",
+              "inverse-primary": "#106f00",
+              "error-container": "#b92902",
+              "surface-dim": "#0a0e14",
+              "on-error": "#450900",
+              "tertiary-fixed-dim": "#00deea",
+              "error": "#ff7351",
+              "on-secondary-fixed": "#003a42"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-primary {
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.3);
+        }
+        .neon-glow-purple {
+            text-shadow: 0 0 10px rgba(188, 19, 254, 0.5), 0 0 20px rgba(188, 19, 254, 0.3);
+        }
+        .neon-border-primary {
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+        }
+        .neon-border-purple {
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.2);
+        }
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(68, 72, 79, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(68, 72, 79, 0.1) 1px, transparent 1px);
+        }
+        .mask-radial {
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        .screen-gradient {
+            background: radial-gradient(circle at 50% 50%, #1a1a1c 0%, #0a0e14 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="screen-gradient text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-[#0e0e0f] dark:bg-[#0e0e0f] z-50 shadow-[0_4px_20px_rgba(57,255,20,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#39FF14] cursor-pointer scale-95 active:scale-90 transition-transform" data-icon="menu">menu</span>
+<h1 class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-[#39FF14] text-lg tracking-tighter italic">KINETIC PITCH</h1>
+</div>
+<div class="w-10 h-10 rounded-full border border-[#39FF14]/30 overflow-hidden bg-surface-container-high transition-transform scale-95 active:scale-90">
+<img alt="User Profile Avatar" data-alt="Close-up portrait of a confident male football coach with short hair wearing professional athletic gear against a dark studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1tqlmF0Hb1ukGApoobWrzVqj7I6lGhnYQj0Tjov0eOHVrX8A7NoYSkSj2rTeyJZ1DaCg9y1CtcbstCG_hIqL-lal-ZYqVhLY7Ts4T5EfKbLiihhC3zpDVrtqgVTCcSnEOMf4OHacraC_wQ7yxb0JsXkW6IAEUkgCUzfyUHH4XTz6maFlRindL_Xsvhc_y9Fr1_xZOUpwpU-Rm6g6adAL_dlNLK5T2zvdSV66yqOhx88KHQ57g8kAo-fKQZ2cWYGo926Gr6tn53g"/>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-transparent via-[#1a191b] to-transparent h-[1px]"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative min-h-screen pt-24 pb-32 overflow-hidden">
+<!-- Background Atmospheric Layering -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-grid opacity-20"></div>
+<div class="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-accent-purple/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/5 blur-[120px] rounded-full"></div>
+<!-- Hero Stylized Background -->
+<div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+<img alt="Football Pitch Background" class="w-[120%] h-auto object-cover mask-radial scale-110" data-alt="Dramatic high-angle cinematic wide shot of a futuristic football stadium at night under bright neon floodlights with atmospheric haze and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfI53UUUSdWKsTudV2cgi-a4vp_jVVzlE2YfyWrmA_SBILf_mIlf14ycTi3Tly-SFz-KtLLHEsJmPdAAAMV3QnOU0_jryKcEaCdBYcMsCtDdi6KQ2L0uAZ1wv6EDM2GnrCujhkqfatjA4M17APHACryc-v_nKzqzknEVVMQcWtur7w5JfE04H-9W2IVqCGcVN5TV55wEXtO4RMVLDFziy9KItLKzC06ZSRZWoRZWzcQCXHL5-dMCxXZCDPfTNVCW6BccazKIQIPQ"/>
+</div>
+</div>
+<section class="relative z-10 px-6 flex flex-col items-center justify-center min-h-[618px]">
+<!-- Kinetic Display Header -->
+<div class="text-center mb-16 space-y-2">
+<div class="inline-block px-3 py-1 bg-surface-container-highest border border-accent-purple/30 rounded-full mb-4">
+<span class="text-[10px] font-bold tracking-[0.2em] text-accent-purple uppercase">Tactical HUD v1.0.2</span>
+</div>
+<h2 class="font-headline font-extrabold text-5xl md:text-7xl leading-tight tracking-tighter text-on-surface">
+                    PURE FOOTBALL<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-purple neon-glow-primary">FUN GROUP</span>
+</h2>
+<p class="text-on-surface-variant font-medium text-lg tracking-wide mt-4 max-w-md mx-auto">
+                    TEAM GENERATOR
+                </p>
+</div>
+<!-- Bento-Style Action Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+<!-- New Game Button (Primary Action) -->
+<button class="group relative flex flex-col items-center justify-center p-8 rounded-full border border-primary/20 bg-surface-container hover:bg-surface-container-high transition-all duration-300 overflow-hidden active:scale-95">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+<span class="material-symbols-outlined text-on-primary text-3xl font-bold" data-icon="sports_soccer">sports_soccer</span>
+</div>
+<span class="relative z-10 font-headline text-2xl font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">NEW GAME</span>
+<span class="relative z-10 text-xs font-semibold text-on-surface-variant/60 tracking-widest uppercase mt-1">Initialize Generator</span>
+</button>
+<!-- Edit Database Button (Secondary Action) -->
+<button class="group relative flex flex-col items-center justify-center p-8 rounded-full border border-accent-purple/20 bg-surface-container hover:bg-surface-container-high transition-all duration-300 overflow-hidden active:scale-95">
+<div class="absolute inset-0 bg-gradient-to-br from-accent-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 w-16 h-16 rounded-full border-2 border-accent-purple flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(188,19,254,0.3)]">
+<span class="material-symbols-outlined text-accent-purple text-3xl" data-icon="database">database</span>
+</div>
+<span class="relative z-10 font-headline text-2xl font-bold tracking-tight text-on-surface group-hover:text-accent-purple transition-colors">EDIT DATABASE</span>
+<span class="relative z-10 text-xs font-semibold text-on-surface-variant/60 tracking-widest uppercase mt-1">Manage Squads</span>
+</button>
+</div>
+<!-- Recent Activity Ticker (Kinetic Element) -->
+<div class="mt-20 w-full max-w-lg">
+<div class="flex items-center justify-between px-4 py-3 bg-surface-container-low/60 backdrop-blur-md rounded-xl border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-accent-purple animate-pulse"></div>
+<span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">Latest Match: Sunday League 12/04</span>
+</div>
+<span class="text-[10px] font-bold text-primary cursor-pointer hover:underline uppercase">View Stats</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Drawer -->
+<aside class="hidden fixed inset-y-0 left-0 z-[60] flex flex-col p-6 h-full w-80 rounded-r-2xl bg-[#0e0e0f] dark:bg-[#0e0e0f] shadow-[20px_0_40px_rgba(0,0,0,0.8)] border-r border-[#1a191b] font-['Space_Grotesk'] ease-in-out duration-500">
+<div class="flex flex-col h-full">
+<div class="flex items-center gap-4 mb-10 pb-6 border-b border-outline-variant/20">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest border border-accent-purple/30 overflow-hidden">
+<img alt="User Profile" data-alt="Close-up portrait of a confident male football coach with short hair wearing professional athletic gear against a dark studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2PnLOP1LEz2pbZGZkd7ljtge4dJSRkL0dHkbS2ucOQ7CoJnNT1b2DhbjNoB1lESS2rzkHRdcExu0ko_S-Lo0t6At-GJ_P8FW1nWcZPmbeSY3uiRtSEBhgLykATt6duWVo-RNgRFdV90mueTPp_Y3nhPKuAImVy-FxH_SpVeU3oQysX-mSICL-Ox_6b401tFGiHGGyxRagpgCI2oVv4e8xxjWNdD-kk-zs_92SRDz1lMRR-GQuexdewfzhI85ljiQXGQd-f2zr4Q"/>
+</div>
+<div>
+<h3 class="text-on-surface font-bold text-lg">STRIKER_01</h3>
+<p class="text-on-surface-variant text-xs uppercase tracking-tight">Pro League</p>
+<span class="text-[10px] text-accent-purple font-black">LVL 99</span>
+</div>
+</div>
+<nav class="space-y-2 flex-grow">
+<a class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:bg-[#131314] hover:pl-2 transition-all duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-medium">Match History</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:bg-[#131314] hover:pl-2 transition-all duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-medium">Player Stats</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:bg-[#131314] hover:pl-2 transition-all duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 text-[10px] text-on-surface-variant/40 font-bold tracking-widest uppercase text-center">
+                v1.0.2 • BUILD_2024
+            </div>
+</div>
+</aside>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#131314]/80 backdrop-blur-md dark:bg-[#131314]/80 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.6)]">
+<!-- Active Tab: Home -->
+<a class="flex flex-col items-center justify-center text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.8)] animate-pulse-slow" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<!-- Inactive Tab: Teams -->
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-[#BC13FE] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Teams</span>
+</a>
+<!-- Inactive Tab: Database -->
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-[#BC13FE] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="database">database</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Database</span>
+</a>
+</nav>
+</body></html>

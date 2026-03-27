@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Select Players | Pure Football Fun Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#88f6ff",
+                        "primary-fixed-dim": "#2be800",
+                        "on-primary-container": "#0b5800",
+                        "surface-container": "#151a21",
+                        "surface-bright": "#262c36",
+                        "surface-container-low": "#0f141a",
+                        "on-primary": "#0d6100",
+                        "on-secondary-container": "#e8fbff",
+                        "error-dim": "#d53d18",
+                        "on-tertiary-fixed": "#003f43",
+                        "surface": "#0a0e14",
+                        "surface-variant": "#20262f",
+                        "outline": "#72757d",
+                        "on-tertiary": "#005d62",
+                        "tertiary-dim": "#00deea",
+                        "inverse-surface": "#f8f9ff",
+                        "secondary-dim": "#00d4ec",
+                        "on-secondary-fixed-variant": "#005964",
+                        "tertiary-fixed": "#17eefa",
+                        "on-tertiary-fixed-variant": "#005e63",
+                        "on-background": "#f1f3fc",
+                        "surface-container-lowest": "#000000",
+                        "secondary": "#00e3fd",
+                        "on-surface-variant": "#a8abb3",
+                        "primary": "#39FF14",
+                        "accent-purple": "#BC13FE",
+                        "tertiary-container": "#17eefa",
+                        "on-primary-fixed": "#064200",
+                        "secondary-fixed": "#26e6ff",
+                        "on-primary-fixed-variant": "#0d6200",
+                        "primary-container": "#2ff801",
+                        "background": "#0a0e14",
+                        "secondary-container": "#006875",
+                        "on-error-container": "#ffd2c8",
+                        "primary-dim": "#2be800",
+                        "surface-tint": "#39FF14",
+                        "outline-variant": "#44484f",
+                        "surface-container-high": "#1b2028",
+                        "inverse-on-surface": "#51555c",
+                        "surface-container-highest": "#20262f",
+                        "on-tertiary-container": "#005458",
+                        "on-secondary": "#004d57",
+                        "secondary-fixed-dim": "#00d7f0",
+                        "primary-fixed": "#2ff801",
+                        "on-surface": "#f1f3fc",
+                        "inverse-primary": "#106f00",
+                        "error-container": "#b92902",
+                        "surface-dim": "#0a0e14",
+                        "on-error": "#450900",
+                        "tertiary-fixed-dim": "#00deea",
+                        "error": "#ff7351",
+                        "on-secondary-fixed": "#003a42"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.4);
+        }
+        .glass-panel {
+            background: rgba(32, 38, 47, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        body {
+            min-height: 100dvh;
+            background: radial-gradient(circle at top right, #1a0b2e, #0a0e14 60%);
+        }
+        .bg-gradient-dark {
+            background: linear-gradient(180deg, rgba(14, 14, 15, 0.9) 0%, rgba(10, 14, 20, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed">
+<!-- TopAppBar Shared Component -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0f]">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#39FF14] scale-95 active:scale-90 transition-transform">menu</span>
+<h1 class="font-['Space_Grotesk'] font-black italic text-[#39FF14] tracking-tighter text-xl">KINETIC PITCH</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#39FF14]/20 bg-surface-container-high shadow-[0_4px_20px_rgba(57,255,20,0.1)] scale-95 active:scale-90 transition-transform cursor-pointer">
+<img alt="User Profile Avatar" data-alt="Close up portrait of a professional football player in high contrast neon lighting with a focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKeinFxYavavcyk3-kbEe2aKLawGRwm3kC-uBT5eJceh4U_Lghs9PuOJfBG7IId9xZMRdZ8WWq_L7iSSKwsw7JIsBiyPScELNzjRlrCuPLElWDOzxOitIoYXP5jZx3MWP2bZUg8a90443ftARwvYhT1H7Qk0b2FGywWKjytkCxNYLnpQDm1GAk6zPc8XVes7CIbbNJgLPWFBNd2eEG3qf4zrzh9aCFwFgc3BFN2r_mBcjeLgR9vmnj_f9ad9RZ7AIDSpuxr3pFGg"/>
+</div>
+</div>
+<div class="bg-gradient-to-r from-transparent via-[#1a191b] to-transparent h-[1px]"></div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen">
+<!-- Header Section -->
+<div class="mb-10">
+<div class="flex justify-between items-end mb-2">
+<h2 class="font-headline text-4xl font-bold tracking-tight uppercase leading-none">Select Players</h2>
+<span class="font-label text-xs tracking-widest text-accent-purple uppercase">Database List</span>
+</div>
+<p class="text-on-surface-variant text-sm max-w-md">Choose members from your squad for the upcoming match. Filter by position or ranking.</p>
+</div>
+<!-- Search & Quick Action -->
+<div class="flex gap-3 mb-8">
+<div class="flex-1 bg-surface-container-low/50 rounded-full px-5 py-3 flex items-center gap-3 border border-outline-variant/20 focus-within:border-accent-purple/50 transition-all">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full font-label text-sm" placeholder="Search by name..." type="text"/>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-accent-purple border border-accent-purple/20 rounded-full px-6 py-3 flex items-center gap-2 transition-all group active:scale-95">
+<span class="material-symbols-outlined text-sm">person_add</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">Add New Player</span>
+</button>
+</div>
+<!-- Player List Grid -->
+<div class="space-y-4">
+<!-- Player Row 1 (Selected State) -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-container-high/40 border border-primary/30 shadow-[0_0_15px_rgba(57,255,20,0.05)] transition-all">
+<div class="relative">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary">
+<img alt="Player" data-alt="Athletic male athlete in black sports gear against a dark background with subtle green rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF6dRXtwpDxg349a-QTuPIs6cZghVO_OE4coTA0afXQe_0GTtxGKRH3wxObOZbwUrUz2SdxXgBoRrSYp-VfYgiLTT2NLrFBMRCxHR1bMlCWmzsfPTJLcd8kyty-0jMaqNNxB8o6ilPWLa2qDH_B9uyGICRaLD0ys298HQhPbLGb_d7B2jLp3K7EiiTIzFAlOc0ufoc9CT63eci-dl4yiiJ_qy5tXds4kAAnfqSAYI-49O3a74Bk7Civ8yW88fZGCekO2tBa2fweg"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary-fixed w-6 h-6 rounded-full flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline text-lg font-bold">MARCUS RASHFORD</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-tighter">FWD</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5 text-accent-purple text-xs">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="ml-1 font-label text-on-surface-variant">4.8</span>
+</div>
+</div>
+<div class="pr-2">
+<div class="w-12 h-6 bg-primary rounded-full flex items-center px-1 cursor-pointer transition-all duration-300">
+<div class="w-4 h-4 bg-on-primary-fixed rounded-full shadow-sm translate-x-6"></div>
+</div>
+</div>
+</div>
+<!-- Player Row 2 -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-container-low/40 border border-outline-variant/10 hover:border-accent-purple/30 transition-all">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-surface-variant">
+<img alt="Player" data-alt="Close up of a football player focusing during training, neon blue background highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmfWsyBe3acflYAntpPkzq5z1vZM6WFc7FIoKF0l7hdhVdSfNzppNHwz6zmoXiBFyH0YgwyE-7yg2kCaiAgbqFZ5gXJOLYoY_iJTBr0sr0oWhLXmuweW4hCfK0L2IwMx9E8cFBDVvVw1DLiyN_wpvYVwFyzcmXIIoyRY7w6Ju6V7rZrLdzNQgYhVP4Jema5fu7oQNS8plQPglQ7J-yYI-Fx4RWlNCEZN-1-hhl3aq-LQx2zT6h_K8LdJYVykf50xxMkZnkRBRIbQ"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline text-lg font-bold text-on-surface/80">KEVIN DE BRUYNE</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-tighter">MID</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5 text-accent-purple text-xs opacity-60">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="ml-1 font-label text-on-surface-variant">4.2</span>
+</div>
+</div>
+<div class="pr-2">
+<div class="w-12 h-6 bg-surface-variant rounded-full flex items-center px-1 cursor-pointer">
+<div class="w-4 h-4 bg-outline rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Player Row 3 -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-container-low/40 border border-outline-variant/10 hover:border-accent-purple/30 transition-all">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-surface-variant">
+<img alt="Player" data-alt="Muscular defender standing tall, silhouette against a dark stadium light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9CBQlFcUp-5Di6BWPsLd7d-vZbZB-4axvsaZmg5EJtOiD2XoYatBju3MrjipsAieQnfs5rBKMpVcuuS13n1QjChxy2OtN2Rj3X13L6lWBfa71gIRuc0MfBdNYSz3wK9ZnUY3LiQU9YUwHox-SoG7_F-nDGjslP8sWPO2wUkSnYvTjshZVvixt7WLocQGzCKXD7nH34Q5jOItvpQAvD8NeCjfEmWKy3cmhb2KLVDIOlDHmTSsRoiljTUbLbhRsozNSEGm5ahULxA"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline text-lg font-bold text-on-surface/80">VIRGIL VAN DIJK</h3>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary-dim text-[10px] font-black uppercase tracking-tighter">DEF</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5 text-accent-purple text-xs opacity-60">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-1 font-label text-on-surface-variant">5.0</span>
+</div>
+</div>
+<div class="pr-2">
+<div class="w-12 h-6 bg-surface-variant rounded-full flex items-center px-1 cursor-pointer">
+<div class="w-4 h-4 bg-outline rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Player Row 4 (Selected State) -->
+<div class="group relative flex items-center gap-4 p-4 rounded-2xl bg-surface-container-high/40 border border-primary/30 shadow-[0_0_15px_rgba(57,255,20,0.05)] transition-all">
+<div class="relative">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary">
+<img alt="Player" data-alt="Dynamic action shot of a young football player jumping, vibrant neon green lights reflecting on gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKv8DTb2q7hMHWbEvNyRfHf5EkjpGJIpxV-NpHUPdgtfIPLX3zewVvTFTKGEOMJJxRdciABV6vUNYMwBbt_swUPcPdlQR9Du2GOf8eqbZ-c1LonhoMacfWad5p6TAfJpL1NfTekhZmLPN525SMMMleDQBsRd3kG0In6EUOcvCygbekMOm1xqED3uJy4551xyerPwPwgycBaMwt5FTBuZusHFlYIbfnDJ-UCHGouGAOznKITCwXSHguDgdMcNaNG054ajnLS6qfaA"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary-fixed w-6 h-6 rounded-full flex items-center justify-center border-2 border-surface">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline text-lg font-bold">ERLING HAALAND</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-tighter">FWD</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5 text-accent-purple text-xs">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-1 font-label text-on-surface-variant">4.9</span>
+</div>
+</div>
+<div class="pr-2">
+<div class="w-12 h-6 bg-primary rounded-full flex items-center px-1 cursor-pointer transition-all duration-300">
+<div class="w-4 h-4 bg-on-primary-fixed rounded-full shadow-sm translate-x-6"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Float Next Button Area -->
+<div class="fixed bottom-28 left-0 w-full px-6 flex justify-center z-40 pointer-events-none">
+<button class="pointer-events-auto bg-gradient-to-r from-accent-purple to-primary text-black font-headline font-black text-xl px-12 py-4 rounded-full uppercase tracking-tighter neon-glow-purple active:scale-95 transition-all flex items-center gap-3">
+            Next Step
+            <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar Shared Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#131314]/80 backdrop-blur-md rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.6)]">
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#BC13FE] transition-all cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#BC13FE] transition-all cursor-pointer">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Teams</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.8)] animate-pulse-slow cursor-pointer">
+<span class="material-symbols-outlined">database</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase tracking-widest">Database</span>
+</div>
+</nav>
+</body></html>
