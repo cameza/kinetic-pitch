@@ -1,65 +1,50 @@
-import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <section className="relative z-10 px-4 flex flex-col items-center justify-center min-h-[500px]">
+      <div className="text-center mb-8 space-y-2">
+        <div className="inline-block px-2 py-0.5 bg-surface-container-highest border border-accent-purple/30 rounded-full mb-2">
+          <span className="text-[9px] font-bold tracking-[0.2em] text-accent-purple uppercase">Tactical HUD v1.0.2</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <h2 className="font-headline font-extrabold text-4xl leading-tight tracking-tighter text-on-surface">
+          PURE FOOTBALL<br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-purple neon-glow-primary">FUN GROUP</span>
+        </h2>
+        <p className="text-on-surface-variant font-medium text-sm tracking-wide mt-2 max-w-sm mx-auto">
+          TEAM GENERATOR
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 w-full max-w-lg">
+        <Link href="/new-game" className="group relative flex flex-col items-center justify-center p-4 rounded-2xl border border-primary/20 bg-surface-container hover:bg-surface-container-high transition-all duration-300 overflow-hidden active:scale-95">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="relative z-10 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(57,255,20,0.3)]">
+            <span className="material-symbols-outlined text-on-primary text-xl font-bold">sports_soccer</span>
+          </div>
+          <span className="relative z-10 font-headline text-lg font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">NEW GAME</span>
+          <span className="relative z-10 text-[9px] font-semibold text-on-surface-variant/60 tracking-widest uppercase mt-0.5">Initialize Generator</span>
+        </Link>
+
+        <Link href="/database" className="group relative flex flex-col items-center justify-center p-4 rounded-2xl border border-accent-purple/20 bg-surface-container hover:bg-surface-container-high transition-all duration-300 overflow-hidden active:scale-95">
+          <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="relative z-10 w-12 h-12 rounded-full border-2 border-accent-purple flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(188,19,254,0.3)]">
+            <span className="material-symbols-outlined text-accent-purple text-xl">database</span>
+          </div>
+          <span className="relative z-10 font-headline text-lg font-bold tracking-tight text-on-surface group-hover:text-accent-purple transition-colors">DATABASE</span>
+          <span className="relative z-10 text-[9px] font-semibold text-on-surface-variant/60 tracking-widest uppercase mt-0.5">Manage Squads</span>
+        </Link>
+      </div>
+
+      <div className="mt-20 w-full max-w-lg">
+        <div className="flex items-center justify-between px-4 py-3 bg-surface-container-low/60 backdrop-blur-md rounded-xl border border-outline-variant/10">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 rounded-full bg-accent-purple animate-pulse"></div>
+            <span className="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">AI Team Builder</span>
+          </div>
+          <span className="text-[10px] font-bold text-primary uppercase">v1.1</span>
         </div>
-      </main>
-    </div>
-  );
+      </div>
+    </section>
+  )
 }

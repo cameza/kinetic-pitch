@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Player {
+  id              String   @id @default(cuid())
+  name            String
+  position        String   // Defense, Midfielder, Striker
+  defensiveSkill  Int      // 1 to 5
+  midfieldSkill   Int      // 1 to 5
+  scoringSkill    Int      // 1 to 5
+  createdAt       DateTime @default(now())
+}
